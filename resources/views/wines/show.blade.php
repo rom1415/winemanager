@@ -44,15 +44,8 @@
         </div>
 
         <div class="col-lg-8">
-
-      <div class="list-group"> 
-        @foreach ($products as $product)
-          <a href="{{ url('wines', $product->prodID) }} " class="list-group-item"> 
-          <h4 class="list-group-item-heading">{{ $product->prodName }}</h4> 
-          <p class="list-group-item-text">{{ $product->prodName }} for a price of <strong>${{ $product->prodPriceBuy }}</strong></p> </a> 
-        @endforeach
-      </div>
-
+         <h2>{{ $product->prodName }}</h2>
+         <h3>${{ $product->prodPriceBuy }}</h3>
       </div>
 
       <footer class="footer">

@@ -47,7 +47,9 @@ class WineController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = DB::table('Products')->where('prodID', $id)->first();
+
+        return view('wines.show', ['product' => $product]);
     }
 
     /**
