@@ -11,3 +11,6 @@ To get products as JSON go to this URL : WineManager/server.php/products
 ## Installation
 
 Only clone this repository in an apache server. No need to update vendors it's already here for simplicity.
+
+PHP Version : 5.6.25
+Apache Version : 2.4.23
