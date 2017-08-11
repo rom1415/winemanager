@@ -31,21 +31,27 @@
           </div>
       <div>
           
+
+      </div>
+
       <div class="row">
 
         <div class="col-lg-4">
           <ul class="list-group">
-            <li class="list-group-item"><a href="{{ url('wines') }}">Wine List</a></li>
+            <li class="list-group-item"><a href="#">Wine List</a></li>
             <li class="list-group-item"><a href="#">Suppliers</a></li>
             <li class="list-group-item"><a href="#">Regions</a></li>
           </ul>
         </div>
 
         <div class="col-lg-8">
-          Welcome to Wines Manager !
+          @foreach ($products as $product)
+            <p>This is product {{ $product->prodName }}</p>
+        @endforeach
         </div>
 
       </div>
+
 
 
       <footer class="footer">

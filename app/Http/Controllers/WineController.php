@@ -14,9 +14,8 @@ class WineController extends Controller
      */
     public function index()
     {
-        $results = DB::select('select * from Products where prodId = 1');
-        var_dump($results);
-        echo "ok";
+        $products = DB::select('select * from Products LIMIT 10');
+        return view('wines.list', ['products' => $products ]);
     }
 
     /**
