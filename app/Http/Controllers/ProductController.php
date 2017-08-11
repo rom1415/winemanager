@@ -15,7 +15,7 @@ class ProductController extends Controller
     public function index()
     {
         // Select 5 products from the Products table in database
-        $products = DB::select('select * from Products LIMIT 5');
+        $products = DB::select('select prodID, prodNum, prodName, prodColorID, prodPack from Products LIMIT 5');
 
         // Return a selection of products as JSON resource
         return json_encode($products);
