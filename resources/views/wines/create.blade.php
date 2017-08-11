@@ -32,8 +32,6 @@
             <a href="{{ url('/') }}"><h3 class="text-muted">Wine Manager</h3></a>
           </div>
       <div>
-          
-
       </div>
 
       <div class="row">

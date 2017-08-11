@@ -32,8 +32,6 @@
             <a href="{{ url('/') }}"><h3 class="text-muted">Wine Manager</h3></a>
           </div>
       <div>
-          
-
       </div>
 
       <div class="row">
@@ -50,12 +48,8 @@
          <h2>{{ $product->prodName }}</h2>
          <h3>${{ $product->prodPriceBuy }}</h3>
 
-         <p>
-           Prod Format : {{ $product->prodFormat }}
-         </p>
-         <p>
-           Buying date : {{ $product->prodDateBuy }}
-         </p>
+         <p>Prod Format : {{ $product->prodFormat }}</p>
+         <p>Buying date : {{ $product->prodDateBuy }}</p>
 
          <p>
            @if ($product->prodAvailable === 0)
