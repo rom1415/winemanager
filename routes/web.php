@@ -13,5 +13,7 @@
 
 Route::resource('wines', 'WineController');
 
+Route::resource('products', 'ProductController');
+
 // Add HomeController route
 Route::resource('/', 'HomeController');
