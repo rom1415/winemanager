@@ -11,8 +11,12 @@
 |
 */
 
+
+// Define URL /wines as a resource controller
 Route::resource('wines', 'WineController');
 
+
+// Define URL /products as a resource controller
 Route::resource('products', 'ProductController');
 
 // Add HomeController route

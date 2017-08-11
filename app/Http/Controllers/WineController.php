@@ -14,6 +14,7 @@ class WineController extends Controller
      */
     public function index()
     {
+        // Get the first 10 products and return it to the product list page
         $products = DB::select('select * from Products LIMIT 10');
         return view('wines.list', ['products' => $products ]);
     }
@@ -36,7 +37,16 @@ class WineController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('Products')->insert([
+            'prodName' => $request->prodName,
+            'prodColorID' => $request->prodColorID,
+            'prodPack' => $request->prodPack,
+            'prodQtyBuy' => $request->prodQtyBuy,
+            'prodSoldOut' => $request->prodSoldOut,
+            'prodAvailable' => $request->prodAvailable
+        ]);
+
+        return redirect('wines');
     }
 
     /**
@@ -47,8 +57,8 @@ class WineController extends Controller
      */
     public function show($id)
     {
+        // Get the first product item from id and return it to the view
         $product = DB::table('Products')->where('prodID', $id)->first();
-
         return view('wines.show', ['product' => $product]);
     }
 

@@ -29,7 +29,7 @@
                 </li>
               </ul>
             </nav>
-            <h3 class="text-muted">Wine Manager</h3>
+            <a href="{{ url('/') }}"><h3 class="text-muted">Wine Manager</h3></a>
           </div>
       <div>
           
@@ -37,9 +37,9 @@
 
         <div class="col-lg-4">
           <ul class="list-group">
-            <li class="list-group-item"><a href="{{ url('wines') }}">Wine List</a></li>
-            <li class="list-group-item"><a href="#">Suppliers</a></li>
-            <li class="list-group-item"><a href="#">Regions</a></li>
+            <a href="{{ url('wines') }}"><li class="list-group-item" >Wines list</li></a>
+            <a href="{{ url('suppliers') }}"><li class="list-group-item" >Suppliers</li></a>
+            <a href="{{ url('regions') }}"><li class="list-group-item" >Regions</li></a>
             <a type="button" class="btn btn-primary" href="{{ url('wines/create') }}">Add a new wine</a>
           </ul>
         </div>

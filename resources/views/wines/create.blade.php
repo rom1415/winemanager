@@ -29,7 +29,7 @@
                 </li>
               </ul>
             </nav>
-            <h3 class="text-muted">Wine Manager</h3>
+            <a href="{{ url('/') }}"><h3 class="text-muted">Wine Manager</h3></a>
           </div>
       <div>
           
@@ -42,6 +42,7 @@
             <li class="list-group-item"><a href="{{ url('wines') }}">Wine List</a></li>
             <li class="list-group-item"><a href="#">Suppliers</a></li>
             <li class="list-group-item"><a href="#">Regions</a></li>
+            <a type="button" class="btn btn-primary" href="{{ url('wines/create') }}">Add a new wine</a>
           </ul>
         </div>
 
@@ -49,7 +50,15 @@
   
           <h2>Add a new wine</h2>
 
-          <form action=""></form>
+          {{ Form::open(array('url' => 'wines', 'method' => 'POST')) }}
+          {{ Form::text('prodName', 'Another Wine', array('class' => 'form-control', 'placeholder' => 'Product Name')) }}
+          {{ Form::text('prodColorID', 1, array('class' => 'form-control', 'placeholder' => 'Prod Color ID')) }}
+          {{ Form::text('prodPack', 6, array('class' => 'form-control', 'placeholder' => 'Prod Pack')) }}
+          {{ Form::text('prodQtyBuy', 100, array('class' => 'form-control', 'placeholder' => 'Qty')) }}
+          {{ Form::text('prodSoldOut', 1, array('class' => 'form-control', 'placeholder' => 'Sold Out')) }}
+          {{ Form::text('prodAvailable', 0, array('class' => 'form-control', 'placeholder' => 'Is Available ?')) }}
+          {{ Form::submit('Add', array('class' => 'form-control', 'placeholder' => 'Product Name')) }}
+          {{ Form::close() }}
       </div>
 
       <footer class="footer">
