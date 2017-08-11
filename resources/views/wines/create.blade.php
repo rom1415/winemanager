@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Wine Manager</title>
+        <title>Add a new wine</title>
 
         <!-- Bootstrap CDN for rapid prototyping !-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -33,23 +33,24 @@
           </div>
       <div>
           
-      <div class="row">
 
+      </div>
+
+      <div class="row">
         <div class="col-lg-4">
           <ul class="list-group">
             <li class="list-group-item"><a href="{{ url('wines') }}">Wine List</a></li>
             <li class="list-group-item"><a href="#">Suppliers</a></li>
             <li class="list-group-item"><a href="#">Regions</a></li>
-            <a type="button" class="btn btn-primary" href="{{ url('wines/create') }}">Add a new wine</a>
           </ul>
         </div>
 
         <div class="col-lg-8">
-          Welcome to Wines Manager !
-        </div>
+  
+          <h2>Add a new wine</h2>
 
+          <form action=""></form>
       </div>
-
 
       <footer class="footer">
         <p>KLF Media 2017</p>

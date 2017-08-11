@@ -25,7 +25,7 @@ class WineController extends Controller
      */
     public function create()
     {
-        //
+        return view('wines.create');
     }
 
     /**
