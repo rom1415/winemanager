@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('wines', 'WineController');
+
+// Add HomeController route
+Route::resource('/', 'HomeController');
